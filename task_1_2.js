@@ -1,10 +1,14 @@
 import fs from 'fs';
 import csv from 'csvtojson';
 
-const csvFilePath = 'csv/node_mentoring_t1_2_input.csv';
+const csvFilePath = 'csv/nodejs-hw1-ex1.csv';
 
-csv()
-      .fromFile(csvFilePath)
-      .then(jsonObj => jsonObj.map(e => `\n${JSON.stringify(e)}`).join())
-      .then(data => fs.writeFileSync('csv/node_mentoring_t1_2_output.txt', data, 'utf8'))
-      .catch(err => console.log(err));
+const readStream = fs.createReadStream(csvFilePath);
+
+const writeStream = fs.createWriteStream('csv/nodejs-hw1-ex1.txt');
+
+readStream.pipe(
+	csv()
+		.on('data', data => data.toString('utf8'))
+		.on('error', err => console.log(err))
+).pipe(writeStream);
