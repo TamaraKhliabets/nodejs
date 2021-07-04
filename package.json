@@ -1,0 +1,47 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.4",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "task1": "nodemon --exec babel-node task_1_1.js",
+    "task2": "nodemon --exec babel-node task_1_2.js",
+    "task3": "nodemon --exec babel-node task_2_1.js",
+    "task4": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TamaraKhliabets/nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TamaraKhliabets/nodejs/issues"
+  },
+  "homepage": "https://github.com/TamaraKhliabets/nodejs#readme"
+}
