@@ -10,9 +10,16 @@ const groupSchema = Joi.object({
     name: Joi.string().required()
 });
 
-const validateUser = user => userSchema.validate(user);
+const loginSchema = Joi.object({
+    userName: Joi.string().required(),
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]*$')).required()
+});
 
-const validateGroup = group => groupSchema.validate(group);
+const validateUser = obj => userSchema.validate(obj);
+
+const validateGroup = obj => groupSchema.validate(obj);
+
+const validateLogin = obj => loginSchema.validate(obj);
 
 const getValidator = schemaName => {
     switch (schemaName) {
@@ -20,6 +27,8 @@ const getValidator = schemaName => {
             return validateUser;
         case 'group':
             return validateGroup;
+        case 'login':
+            return validateLogin;
         default:
             return;
     }
