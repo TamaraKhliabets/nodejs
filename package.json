@@ -8,7 +8,9 @@
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
     "joi": "^17.4.0",
-    "pg": "^8.6.0"
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.4",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
@@ -25,6 +27,7 @@
     "task1": "nodemon --exec babel-node task_1_1.js",
     "task2": "nodemon --exec babel-node task_1_2.js",
     "task3": "nodemon --exec babel-node task_2_1.js",
+    "task4": "nodemon --exec babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js,.jsx ."
