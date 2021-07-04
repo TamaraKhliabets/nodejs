@@ -23,8 +23,11 @@ const {
         deleteGroup
     }
 } = require('./routers/router');
+const { logger, errorHandler } = require('./logger');
 
 app.use(express.json());
+app.use(logger);
+app.use(errorHandler);
 
 router
     .use('/users', (req, res, next) => validate(req, res, next, 'user'))
