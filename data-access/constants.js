@@ -1,5 +1,8 @@
-const db = 'postgres://tbwhlrme:J8w4KbBKACOkGujQs3HxSrb3VU-TeAbY@queenie.db.elephantsql.com/tbwhlrme';
+const { URL, SECRET } = require('./env');
+const db = URL;
+const secret = SECRET;
 
 module.exports = {
-    db
+    db,
+    secret
 };

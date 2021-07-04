@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.13.10",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.23.0",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
   },
@@ -30,7 +31,7 @@
     "task2": "nodemon --exec babel-node task_1_2.js",
     "task3": "nodemon --exec babel-node task_2_1.js",
     "task4": "nodemon --exec babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --forceExit",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
